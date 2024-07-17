@@ -1,5 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using TaskManagementSystem.DataAccess.TaskManagementEntities;
+using TaskManagementSystem.Interfaces;
+using TaskManagementSystem.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,6 +16,7 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<TaskManagementDBContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("TaskManagementDB")));
 
+builder.Services.AddTransient<IEmployeeRepo, EmployeeService>();
 
 var app = builder.Build();
 

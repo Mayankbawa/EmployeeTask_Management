@@ -3,12 +3,14 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace TaskManagementSystem.DataAccess.TaskManagementEntities
 {
-    public partial class Manager
+    public partial class TeamMember
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int ManagerId { get; set; }
-        public string Name { get; set; }
-        public ICollection<Employee> TeamMembers { get; set; }
+        public int TeamMemberId { get; set; }
+        public int employeeId { get; set; }
+        public Employee Employee { get; set; }
+        public int TeamId { get; set; }
+        public Team Team { get; set; }
     }
 }

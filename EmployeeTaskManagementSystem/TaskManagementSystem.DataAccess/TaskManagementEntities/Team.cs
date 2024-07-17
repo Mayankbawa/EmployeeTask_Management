@@ -9,6 +9,6 @@ namespace TaskManagementSystem.DataAccess.TaskManagementEntities
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int TeamId { get; set; }
         public string Name { get; set; }
-        public ICollection<Employee> Employees { get; set; }
+        public ICollection<TeamMember> TeamMembers { get; set; }
     }
 }

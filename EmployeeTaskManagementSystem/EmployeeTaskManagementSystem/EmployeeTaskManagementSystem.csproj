@@ -19,6 +19,9 @@
 
   <ItemGroup>
     <ProjectReference Include="..\TaskManagementSystem.DataAccess\TaskManagementSystem.DataAccess.csproj" />
+    <ProjectReference Include="..\TaskManagementSystem.Interfaces\TaskManagementSystem.Interfaces.csproj" />
+    <ProjectReference Include="..\TaskManagementSystem.Services\TaskManagementSystem.Services.csproj" />
+    <ProjectReference Include="..\TaskManagementSystem.Utilities\TaskManagementSystem.Utilities.csproj" />
   </ItemGroup>
 
 </Project>

@@ -6,4 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\TaskManagementSystem.DataAccess\TaskManagementSystem.DataAccess.csproj" />
+    <ProjectReference Include="..\TaskManagementSystem.Interfaces\TaskManagementSystem.Interfaces.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -10,8 +10,8 @@ namespace TaskManagementSystem.DataAccess.TaskManagementEntities
         public int EmployeeId { get; set; }
         public string Name { get; set; }
         public string Email { get; set; }
-        public int ManagerId { get; set; }
-        public Manager Manager { get; set; }
+        public int? ManagerId { get; set; }
+        public string employeeDesignation { get; set; }
         public ICollection<Task> Tasks { get; set; }
     }
 }

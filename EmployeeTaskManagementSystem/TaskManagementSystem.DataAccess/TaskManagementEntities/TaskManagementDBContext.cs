@@ -17,7 +17,7 @@ namespace TaskManagementSystem.DataAccess.TaskManagementEntities
         public virtual DbSet<Note> Notes { get; set; }
         public virtual DbSet<Document> Documents { get; set; }
         public virtual DbSet<Team> Teams { get; set; }
-        public virtual DbSet<Manager> Managers { get; set; }
+        public virtual DbSet<TeamMember> Teammembers { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
