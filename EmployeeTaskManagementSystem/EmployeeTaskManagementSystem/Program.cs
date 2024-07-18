@@ -24,6 +24,7 @@ builder.Services.AddTransient<ITaskRepo, TaskService>();
 builder.Services.AddTransient<INoteRepo, NotesService>();
 builder.Services.AddTransient<IDocumentRepo, DocumentService>();
 builder.Services.AddTransient<ITeamRepo, TeamService>();
+builder.Services.AddTransient<IReportRepo, ReprotService>();
 builder.Services.AddTransient<FileUploadHandler>();
 
 var app = builder.Build();
