@@ -1,12 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using TaskManagementSystem.Models;
 
 namespace TaskManagementSystem.Interfaces
 {
-    internal interface INoteRepo
+    public interface INoteRepo
     {
+        Task<bool> AddNotes(NoteVM model);
+
+        Task<bool> UpdateNote(NoteVM model);
+
+        Task<NoteVM> GetNotesById(int id);
+
+        Task<List<NoteVM>> GetAllNotes();
+
+        Task<List<NoteVM>> GetAllNotesByTaskId(int taskId);
+
+        Task<bool> DeleteNotes(int noteId);
     }
 }

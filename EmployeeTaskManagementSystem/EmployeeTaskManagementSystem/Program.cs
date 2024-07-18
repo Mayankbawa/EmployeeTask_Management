@@ -2,6 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using TaskManagementSystem.DataAccess.TaskManagementEntities;
 using TaskManagementSystem.Interfaces;
 using TaskManagementSystem.Services;
+using TaskManagementSystem.Utilities;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,7 +17,14 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<TaskManagementDBContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("TaskManagementDB")));
 
+
+
 builder.Services.AddTransient<IEmployeeRepo, EmployeeService>();
+builder.Services.AddTransient<ITaskRepo, TaskService>();
+builder.Services.AddTransient<INoteRepo, NotesService>();
+builder.Services.AddTransient<IDocumentRepo, DocumentService>();
+builder.Services.AddTransient<ITeamRepo, TeamService>();
+builder.Services.AddTransient<FileUploadHandler>();
 
 var app = builder.Build();
 

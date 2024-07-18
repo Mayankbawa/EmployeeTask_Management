@@ -1,6 +1,17 @@
-﻿namespace TaskManagementSystem.Interfaces
+﻿using TaskManagementSystem.Models;
+
+namespace TaskManagementSystem.Interfaces
 {
-    internal interface ITeamRepo
+    public interface ITeamRepo
     {
+        Task<bool> AddTeam(TeamRequestVM model);
+
+        Task<bool> DeleteTeam(int teamId);
+
+        Task<bool> UpdateTeam(TeamRequestVM model);
+
+        Task<List<TeamVM>> GetAllTeams();
+
+        Task<TeamVM> GetTeam(int teamId);
     }
 }

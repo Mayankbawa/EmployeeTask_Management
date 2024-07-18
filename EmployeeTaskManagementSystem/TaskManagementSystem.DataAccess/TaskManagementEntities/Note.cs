@@ -9,6 +9,7 @@ namespace TaskManagementSystem.DataAccess.TaskManagementEntities
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int NoteId { get; set; }
         public string Content { get; set; }
+        public DateTime? ModifiedAt { get; set; }
         public DateTime CreatedAt { get; set; }
         public int TaskId { get; set; }
         public Task Task { get; set; }
