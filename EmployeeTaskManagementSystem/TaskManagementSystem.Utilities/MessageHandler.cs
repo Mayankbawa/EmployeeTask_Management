@@ -10,11 +10,5 @@
             public const string Delete_Success = "Data deleted successfully";
             public const string Error = "Error. Please try again with appropriate data";
         }
-
-        public static class StatusMsg
-        {
-            public const string Success = "success";
-            public const string Error = "error";
-        }
     }
 }
